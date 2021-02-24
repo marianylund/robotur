@@ -3,8 +3,9 @@
   <v-form>
     <v-container>
         <v-img
-            lazy-src="/mapimage.png"
-            src="/mapimage.png"
+            contain    
+            src="/images/mapimage.png"
+            height = "80vh"
         ></v-img>
     </v-container>
   </v-form>

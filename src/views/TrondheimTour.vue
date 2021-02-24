@@ -1,3 +1,4 @@
+// Page you to when you click explore on the Trondheim Tour card
 <template>
   <v-container>
       <v-layout row>

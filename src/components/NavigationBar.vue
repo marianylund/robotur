@@ -1,3 +1,4 @@
+// Navigation bar that show on top on all pages
 <template>
   <v-container>
     <v-app-bar app dark>
