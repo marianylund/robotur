@@ -4,7 +4,7 @@
       <v-text-field>
         <template v-slot:label>
           Search <v-icon style="vertical-align: middle">
-            mdi-file-find
+            mdi-search-web
           </v-icon>
         </template>
       </v-text-field>
