@@ -1,5 +1,8 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <v-container>
+    <v-app-bar app dark>
+    
+    </v-app-bar>
+
+  </v-container>
 </template>

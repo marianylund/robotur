@@ -1,4 +1,4 @@
-# robotur
+# Robotur
 
 ## Project setup
 ```
