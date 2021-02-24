@@ -3,10 +3,8 @@
   <v-form>
     <v-container>
         <v-img
-            lazy-src="https://picsum.photos/id/11/10/6"
-            max-height="237"
-            max-width="250"
-            src="https://picsum.photos/id/11/500/300"
+            lazy-src="/mapimage.png"
+            src="/mapimage.png"
         ></v-img>
     </v-container>
   </v-form>
