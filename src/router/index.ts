@@ -8,7 +8,7 @@ const routes: Array<RouteConfig> = [
   {
     path: "/",
     name: "Home",
-    component: Home
+    component: Home,
   },
   {
     path: "/trondheimtour",
@@ -17,12 +17,15 @@ const routes: Array<RouteConfig> = [
     // this generates a separate chunk (TrondheimTour.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "TrondheimTour" */ "../views/TrondheimTour.vue")
-  }
+      import(
+        /* webpackChunkName: "TrondheimTour" */ "../views/TrondheimTour.vue"
+      ),
+  },
 ];
 
 const router = new VueRouter({
-  routes
+  mode: "history",
+  routes,
 });
 
 export default router;
