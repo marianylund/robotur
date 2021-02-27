@@ -3,7 +3,7 @@
   <v-container>
     <v-app-bar app dark>
       <router-link id="icon-link" to="/">
-        <v-icon class="mr-200">mdi-robot</v-icon>
+        <v-icon id="logo-icon" class="mr-200">mdi-robot</v-icon>
       </router-link>
 
       <v-toolbar-title style="cursor: pointer" @click="$router.push('/')"
@@ -16,6 +16,9 @@
 <style lang="scss">
 #icon-link {
   text-decoration: none;
+}
+#logo-icon {
+  padding-right: 0.3rem;
 }
 </style>
 
