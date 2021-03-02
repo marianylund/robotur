@@ -21,19 +21,3 @@
   padding-right: 0.3rem;
 }
 </style>
-
-<script>
-export default {
-  mounted() {
-    console.log(this.$vuetify.breakpoint);
-  },
-  computed: {
-    barVisibility() {
-      if (this.$vuetify.breakpoint.name == "xs") {
-        return true;
-      }
-      return false;
-    },
-  },
-};
-</script>
