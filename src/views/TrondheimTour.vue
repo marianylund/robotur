@@ -1,13 +1,15 @@
 // Page you to when you click explore on the Trondheim Tour card
 <template>
   <v-container>
-      <v-layout row>
-        <v-flex cols="12">
+      <v-layout>
+        <v-row>
+          <v-col cols="8">
             <Photo/>
-          </v-flex >
-          <v-flex cols="6">
+          </v-col>
+          <v-col cols="4">
             <Map/>
-          </v-flex >
+          </v-col>
+          </v-row >
     </v-layout>
   </v-container>
 </template>
