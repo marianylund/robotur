@@ -1,80 +1,65 @@
-// Show photos of the tour, change it to caroussel: https://vuetifyjs.com/en/components/carousels/#usage
+<!-- Contains a carousel item with images and circles to click on-->
 
 <template>
   <v-form>
     <v-carousel v-model="model" height="80vh">
-      <v-carousel-item v-for="(image, i) in images" :key="i">
+      <!-- For each slide place image -->
+      <v-carousel-item v-for="(slide, i) in slides" :key="i">
         <v-sheet height="80vh" align="center" justify="center" tile>
-          <v-img contain :src="image" height="80vh" width="70vw"></v-img>
+          <v-img contain :src="slide.img" height="80vh" width="70vw"></v-img>
+         <!-- On the image iterate over the buttons needed to add, 
+            change their position and add onclick function -->
+          <div v-for="(button, j) in slide.buttons" :key="j">
+            <circle-btn :top="button.top" :left="button.left" :onclick="button.func"></circle-btn>
+          </div>
         </v-sheet>
       </v-carousel-item>
     </v-carousel>
-
-    <!-- <div ref="parent"></div>
-
-    <div class="hi" @click="hi" ref="hi"></div> -->
   </v-form>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import CircleBtn from "@/components/CircleBtn.vue"; // @ is an alias to /src
+
+export default{
+  components: {
+    'circle-btn': CircleBtn
+  },
   data: () => ({
     model: 0,
-    images: ["/images/tourimage.png", "/images/tourimage.png"],
-    floatingBtn: [
+    slides: [
       {
-        height: 200,
-        width: 200,
-        left: 200,
-        top: 200,
+        img:"/images/tourimage.png",
+        buttons: [
+          {
+            left: 200,
+            top: 200,
+            func: () => {console.log("Wow, it worked11");}
+          },
+          {
+            left: 400,
+            top: 400,
+            func: () => {console.log("Wow, it worked12");}
+          },
+        ]
       },
       {
-        height: 200,
-        width: 200,
-        left: 500,
-        top: 200,
+        img:"/images/tourimage.png",
+        buttons: [
+          {
+            left: 150,
+            top: 500,
+            func: () => {console.log("Wow, it worked21");}
+          },
+          {
+            left: 200,
+            top: 400,
+            func: () => {console.log("Wow, it worked22");}
+          },
+        ]
       },
+
     ],
-    localBtns: []
   }),
-  mounted() {
-    this.updateBtn();
-  },
-  methods: {
-    updateBtn() {
-      this.localBtns.forEach(btn => btn.parent.removeChild(btn));
-
-      this.floatingBtn.forEach(btnConf => {
-
-        const btn = document.createElement("div");
-        btn.style.position = "absolute";
-        btn.style.left = btnConf.left + "px";
-        btn.style.top = btnConf.top + "px";
-        btn.style.width = btnConf.width + "px";
-        btn.style.height = btnConf.height + "px";
-        btn.style.backgroundColor = "#00ffff";
-
-        this.$refs["parent"].appendChild(btn);
-
-        this.localBtns.push(btn);
-      })
-    },
-    hi() {
-      console.log("Hello");
-
-      this.$refs["hi"].style.backgroundColor = "#ffff00";
-    },
-  },
 };
 </script>
-<style scoped>
-.hi {
-  position: absolute;
-  left: 20px;
-  top: 20px;
-  width: 200px;
-  height: 100px;
-  background-color: red;
-  border-radius: 2em;
-}
-</style>
