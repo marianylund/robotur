@@ -29,7 +29,7 @@ export default{
     model: 0,
     slides: [
       {
-        img:"/images/tourimage.png",
+        img:"/TrondheimTour/dreiers minne01.jpg",
         buttons: [
           {
             left: 200,
@@ -44,7 +44,7 @@ export default{
         ]
       },
       {
-        img:"/images/tourimage.png",
+        img:"/TrondheimTour/dreiers minne02.jpg",
         buttons: [
           {
             left: 150,
@@ -58,7 +58,25 @@ export default{
           },
         ]
       },
-
+      {img:"/TrondheimTour/dreiers minne03.jpg", buttons: []},
+      {img:"/TrondheimTour/dreiers minne04.jpg", buttons: []},
+      {img:"/TrondheimTour/dreiers minne05.jpg", buttons: []},
+      {img:"/TrondheimTour/dreiers minne06.jpg", buttons: []},
+      {img:"/TrondheimTour/dreiers minne07.jpg", buttons: []},
+      {img:"/TrondheimTour/dreiers minne08.jpg", buttons: []},
+      {img:"/TrondheimTour/dreiers minne09.jpg", buttons: []},
+      {img:"/TrondheimTour/dreiers minne10.jpg", buttons: []},
+      {img:"/TrondheimTour/dreiers minne11.jpg", buttons: []},
+      {img:"/TrondheimTour/dreiers minne12.jpg", buttons: []},
+      {img:"/TrondheimTour/dreiers minne13.jpg", buttons: []},
+      {img:"/TrondheimTour/dreiers minne14.jpg", buttons: []},
+      {img:"/TrondheimTour/dreiers minne15.jpg", buttons: []},
+      {img:"/TrondheimTour/dreiers minne16.jpg", buttons: []},
+      {img:"/TrondheimTour/dreiers minne17.jpg", buttons: []},
+      {img:"/TrondheimTour/dreiers minne18.jpg", buttons: []},
+      {img:"/TrondheimTour/dreiers minne19.jpg", buttons: []},
+      {img:"/TrondheimTour/dreiers minne20.jpg", buttons: []},
+      {img:"/TrondheimTour/dreiers minne21.jpg", buttons: []},
     ],
   }),
 };
