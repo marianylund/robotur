@@ -6,6 +6,8 @@
 </template>
 
 <script lang="ts">
+import Vue from "vue";
+
 const getCurrentWeather = async (lat: number, lon: number) => {
   const url = `https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=${lat}&lon=${lon}`;
   const response = await fetch(url, {
@@ -17,9 +19,17 @@ const getCurrentWeather = async (lat: number, lon: number) => {
   return json;
 };
 
-export default {
-  name: "Weather",
-  props: ["lat", "lon"],
+export default Vue.extend({
+  props: {
+    lat: {
+      type: Number,
+      default: 1,
+    },
+    lon: {
+      type: Number,
+      default: 1,
+    },
+  },
   data: function() {
     return {
       airTemp: 0,
@@ -40,5 +50,5 @@ export default {
       this.img = `/weathericons/${this.symbolCode}.png`;
     });
   },
-};
+});
 </script>
