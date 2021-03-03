@@ -38,8 +38,8 @@
         }),
         mounted() {
             // Ignore error with style, it actually works:
-            this.$refs["circleBtn"].style.top = this.$props.top + "px";
-            this.$refs["circleBtn"].style.left = this.$props.left + "px";
+            // this.$refs["circleBtn"].style.top = this.$props.top + "px";
+            // this.$refs["circleBtn"].style.left = this.$props.left + "px";
         },
     }
 </script>
