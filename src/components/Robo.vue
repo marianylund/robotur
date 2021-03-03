@@ -7,7 +7,6 @@
         <v-btn class="close-btn" icon color="grey" @click='open = !open'>
             <v-icon>mdi-close-box</v-icon>
         </v-btn>
-
         <v-img
             class="robo-image"
             src="/images/robo.png"
@@ -18,9 +17,30 @@
 
 <script lang="ts">
     export default{
+        name: 'Robo',
+        props: {
+            top: {
+                type: Number,
+                default: 400
+            },
+            left: {
+                type: Number,
+                default: 100
+            },
+            text: {
+                // 
+                type: String,
+                default: "Hei!",
+            }
+        },
         data: () => ({
             open: false
-        })
+        }),
+        mounted() {
+            // Ignore error with style, it actually works:
+            this.$refs["circleBtn"].style.top = this.$props.top + "px";
+            this.$refs["circleBtn"].style.left = this.$props.left + "px";
+        },
     }
 </script>
 
@@ -40,6 +60,5 @@
         align-content: left;
         left: 160px;
         top: 20px;
-
     }
 </style>

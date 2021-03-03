@@ -63,6 +63,7 @@ export default {
         disableExplore: false,
         exploreRef: '/trondheimtour',
         },
+        
         {show: false, title: 'Oslo Skog', subtitle: 'Fin Natur Også', date: '2019 Spring',
         img: '/images/tourimage.png',
         adress: 'Blablasveien 35', 
