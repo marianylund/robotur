@@ -3,11 +3,16 @@
   <div>
       <!-- Comment out button after debugging -->
     <button @click='open = !open'> Toggle Animation </button>
-    <v-img
-        v-show="open"
-        class="robo"
-        src="/images/robo.png"
-    ></v-img>
+    <div class="robo" v-show="open">
+        <v-btn icon color="grey" @click='open = !open'>
+            <v-icon>mdi-close-box</v-icon>
+        </v-btn>
+
+        <v-img
+            class="robo-image"
+            src="/images/robo.png"
+        ></v-img>
+    </div>
   </div>
 </template>
 
@@ -24,7 +29,10 @@
         position: absolute;
         left: 100px;
         top: 100px;
-        width: 200px;
         z-index: 99; /*  To show the image on top of everyhting */
+    }
+
+    .robo-image {
+        width: 200px;
     }
 </style>

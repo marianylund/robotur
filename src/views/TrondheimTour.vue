@@ -27,7 +27,6 @@ import Robo from "@/components/Robo.vue"; // @ is an alias to /src
       Map,
       Photo,
       Robo
-
   }
 })
 export default class Home extends Vue {}
