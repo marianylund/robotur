@@ -13,7 +13,7 @@ import TourCards from "@/components/TourCards.vue"; // @ is an alias to /src
 @Component({
   components: {
     SearchBar,
-    TourCards
+    TourCards,
   }
 })
 export default class Home extends Vue {}
