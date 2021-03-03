@@ -4,7 +4,7 @@
       <!-- Comment out button after debugging -->
     <button @click='open = !open'> Toggle Animation </button>
     <div class="robo" v-show="open">
-        <v-btn icon color="grey" @click='open = !open'>
+        <v-btn class="close-btn" icon color="grey" @click='open = !open'>
             <v-icon>mdi-close-box</v-icon>
         </v-btn>
 
@@ -28,11 +28,18 @@
     .robo {
         position: absolute;
         left: 100px;
-        top: 100px;
+        top: 400px;
         z-index: 99; /*  To show the image on top of everyhting */
     }
 
     .robo-image {
         width: 200px;
+    }
+
+    .close-btn {
+        align-content: left;
+        left: 160px;
+        top: 20px;
+
     }
 </style>
