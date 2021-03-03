@@ -1,5 +1,8 @@
 <template>
-  <div>Temperatur: {{ airTemp }}°C</div>
+  <v-card elevation="2" outlined shaped max-width="100">
+    <v-card-title id="temp">{{ airTemp }}°C </v-card-title>
+    <v-img contain :src="img" height="75px" width="75px"></v-img>
+  </v-card>
 </template>
 
 <script lang="ts">
@@ -20,6 +23,8 @@ export default {
   data: function() {
     return {
       airTemp: 0,
+      symbolCode: "sunny",
+      img: "/weathericons/clearsky_day.png",
     };
   },
   created() {
@@ -28,6 +33,11 @@ export default {
         json["properties"]["timeseries"][0]["data"]["instant"]["details"][
           "air_temperature"
         ];
+      this.symbolCode =
+        json["properties"]["timeseries"][0]["data"]["next_1_hours"]["summary"][
+          "symbol_code"
+        ];
+      this.img = `/weathericons/${this.symbolCode}.png`;
     });
   },
 };

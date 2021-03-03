@@ -1,6 +1,7 @@
 // Page you to when you click explore on the Trondheim Tour card
 <template>
   <v-container>
+    <Weather id="wheatherbox" lat="63.4305" lon="10.3951" />
     <v-layout>
       <v-row>
         <v-col cols="8">
@@ -9,7 +10,6 @@
         </v-col>
         <v-col cols="4">
           <Map />
-          <Weather lat="63.4305" lon="10.3951" />
         </v-col>
       </v-row>
     </v-layout>
@@ -33,3 +33,12 @@ import Weather from "@/components/Weather.vue";
 })
 export default class Home extends Vue {}
 </script>
+<style scoped>
+#wheatherbox {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  text-align: left;
+  z-index: 10;
+}
+</style>
