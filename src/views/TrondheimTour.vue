@@ -5,7 +5,7 @@
     <v-layout>
       <v-row>
         <v-col cols="8" style="position: relative">
-          <Photo v-on:robo-text="handleEventFormPhoto"/>
+          <Photo v-on:button-on-photo="handleEventFormPhoto"/>
           <Robo :text="roboText" :open="showingRobo"/>
         </v-col>
         <v-col cols="4">
@@ -31,13 +31,14 @@ import { mapGetters } from "vuex";
     Robo,
     Weather,
   },
-  computed: mapGetters(["roboText", "showingRobo"]),
+  // Get variables from the store, to be able to use them in components
+  computed: mapGetters(["roboText", "showingRobo"]), 
 })
 export default class Home extends Vue {
-  text!:string;
 
   handleEventFormPhoto(button: any) {
-    this.$store.commit("updateRobo", button.top);
+    // Update state
+    this.$store.commit("buttonOnPhotoClicked", button);
   }
 }
 </script>

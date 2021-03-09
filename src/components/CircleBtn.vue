@@ -24,6 +24,10 @@ export default Vue.extend({
         console.log("Clicked button");
       },
     },
+    roboText: {
+      type: String,
+      default: "oh hi there it's me your pal Robo",
+    },
   },
   data: () => ({
     clicked: false,
@@ -41,8 +45,8 @@ export default Vue.extend({
         (this.$refs["circleBtn"] as HTMLElement).style.backgroundColor =
           "rgba(250, 14, 6, 0.144)";
         this.$data.clicked = true;
-        this.$props.onclick();
       }
+      this.$props.onclick(); // One will always be able to click it, even if it has been clicked on
     },
   },
 });

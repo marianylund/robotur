@@ -23,7 +23,6 @@
         name: 'Robo',
         props: {
             text: {
-                // 
                 type: String,
                 default: "oh hi there it's me your pal Robo"
             },

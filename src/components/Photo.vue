@@ -10,7 +10,7 @@
          <!-- On the image iterate over the buttons needed to add, 
             change their position and add onclick function -->
           <div v-for="(button, j) in slide.buttons" :key="j">
-            <circle-btn :top="button.top" :left="button.left" :onclick="() => $emit('robo-text', button)"></circle-btn>
+            <circle-btn :top="button.top" :left="button.left" :onclick="() => $emit('button-on-photo', button)"></circle-btn>
           </div>
         </v-sheet>
       </v-carousel-item>
@@ -34,10 +34,13 @@ export default{
           {
             left: 200,
             top: 200,
+            roboText: "Button one clicked",
           },
           {
             left: 400,
             top: 400,
+            roboText: "Button two clicked",
+
           },
         ]
       },
@@ -47,6 +50,7 @@ export default{
           {
             left: 150,
             top: 500,
+            roboText: "Button three clicked",
           },
           {
             left: 200,

@@ -10,15 +10,16 @@ export default new Vuex.Store({
     showingRobo: false,
   },
   getters: {
-    roboText: (state) => {return state.roboText.toString()},
+    roboText: (state) => state.roboText,
     showingRobo: (state) => state.showingRobo,
   },
   mutations: {
     increment (state) {
       state.count++
     },
-    updateRobo(state, text: string) {
-        state.roboText = text;
+    buttonOnPhotoClicked(state, button: any) {
+        // Extract needed data from button to update state
+        state.roboText = button.roboText;
         state.showingRobo = true;
     },
     hideRobo(state){
