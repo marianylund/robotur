@@ -2,7 +2,7 @@
 
 <template>
   <v-form>
-    <v-carousel v-model="model" height="80vh">
+    <v-carousel v-model="model" height="80vh" hide-delimiters>
       <!-- For each slide place image -->
       <v-carousel-item v-for="(slide, i) in slides" :key="i">
         <v-sheet height="80vh" align="center" justify="center" tile>
