@@ -10,7 +10,7 @@
         </div>
         <div class="textbox">
             <div class="text">{{text}}</div>
-            <v-btn class="close-btn" icon color="grey" @click='open = !open'>
+            <v-btn class="close-btn" icon color="grey" @click='()=>{this.$store.commit("hideRobo")}'>
                 <v-icon>mdi-close-circle</v-icon>
             </v-btn>
         </div>

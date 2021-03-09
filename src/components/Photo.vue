@@ -10,7 +10,7 @@
          <!-- On the image iterate over the buttons needed to add, 
             change their position and add onclick function -->
           <div v-for="(button, j) in slide.buttons" :key="j">
-            <circle-btn :top="button.top" :left="button.left" :onclick="button.func"></circle-btn>
+            <circle-btn :top="button.top" :left="button.left" :onclick="() => $emit('robo-text', button)"></circle-btn>
           </div>
         </v-sheet>
       </v-carousel-item>
@@ -34,12 +34,10 @@ export default{
           {
             left: 200,
             top: 200,
-            func: () => {console.log("Wow, it worked11");}
           },
           {
             left: 400,
             top: 400,
-            func: () => {console.log("Wow, it worked12");}
           },
         ]
       },
@@ -49,12 +47,10 @@ export default{
           {
             left: 150,
             top: 500,
-            func: () => {console.log("Wow, it worked21");}
           },
           {
             left: 200,
             top: 400,
-            func: () => {console.log("Wow, it worked22");}
           },
         ]
       },
