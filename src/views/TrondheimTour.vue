@@ -2,17 +2,11 @@
 <template>
   <v-container fluid>
     <Weather id="wheatherbox" :lat="63.4305" :lon="10.3951" />
-    <v-layout>
-      <v-row>
-        <v-col cols="8" style="position: relative">
-          <Photo v-on:button-on-photo="handleEventFormPhoto"/>
-          <Robo :text="roboText" :open="showingRobo"/>
-        </v-col>
-        <v-col cols="4">
-          <Map />
-        </v-col>
-      </v-row>
-    </v-layout>
+          <!-- 
+            En pop up når man har trykket på map button
+            <Photo v-on:button-on-photo="handleEventFormPhoto"/>
+          <Robo :text="roboText" :open="showingRobo"/> -->
+    <Map />
   </v-container>
 </template>
 

@@ -10,6 +10,10 @@ import Vue from "vue";
 export default Vue.extend({
   name: "CircleBtn",
   props: {
+    id:{
+      type: String,
+      default: ""
+    },
     top: {
       type: Number,
       default: 20,
@@ -40,7 +44,7 @@ export default Vue.extend({
   },
   methods: {
     hi() {
-      console.log("Clicked");
+      console.log("Clicked", this.$props.id, this.$props.roboText);
       if (!this.$data.clicked) {
         (this.$refs["circleBtn"] as HTMLElement).style.backgroundColor =
           "rgba(250, 14, 6, 0.144)";
@@ -57,8 +61,8 @@ export default Vue.extend({
   position: absolute;
   left: 20px;
   top: 20px;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   background-color: rgba(14, 250, 6, 0.144);
   border-radius: 50px;
   border-style: solid;
