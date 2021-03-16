@@ -1,10 +1,8 @@
 import Vue from "vue";
-import VueRouter, { RouteConfig } from "vue-router";
+import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-
 Vue.use(VueRouter);
-
-const routes: Array<RouteConfig> = [
+const routes = [
   {
     path: "/",
     name: "Home",
@@ -27,10 +25,9 @@ const routes: Array<RouteConfig> = [
     component: () => import("../views/TrondheimPlants.vue"),
   },
 ];
-
 const router = new VueRouter({
   mode: "history",
   routes,
 });
-
 export default router;
+//# sourceMappingURL=index.js.map
