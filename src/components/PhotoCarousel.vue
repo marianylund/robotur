@@ -10,7 +10,7 @@
     <v-carousel v-model="model" height="80vh" hide-delimiters>
       <!-- For each slide place image -->
       <v-carousel-item 
-        v-for="(slide, i) in mapPlaces[mapPlace].slides" :key="i"
+        v-for="(slide, i) in mapPlaces[mapPlace - 1].slides" :key="i"
       >
         <v-sheet height="80vh" align="center" justify="center" tile>
           <v-img contain :src="slide.img" height="80vh" width="70vw"></v-img>
