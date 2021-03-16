@@ -1,6 +1,6 @@
 // Show map to the right of the screen with buttons on the road
 <template>
-  <v-form>
+  <v-form v-if="show">
     <div class="mapDiv" ref="mapDiv">
       <img class = "mapImage" src="/images/mapimage.png" alt="Map" height="600" ref="mapImage">
       <div v-for="(button, j) in buttons" :key="j">
@@ -14,11 +14,16 @@
 <script lang="ts">
 import CircleBtn from "@/components/CircleBtn.vue"; // @ is an alias to /src
 import Vue from "vue";
-import VueComponent from "vue";
 
 export default Vue.extend({
   components: {
     'circle-btn': CircleBtn
+  },
+   props: {
+      show: {
+          type: Boolean,
+          default: true
+      }
   },
   data: () => ({
         buttons: [

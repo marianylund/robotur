@@ -1,5 +1,5 @@
 <template>
-  <v-card elevation="2" outlined shaped max-width="100">
+  <v-card elevation="2" outlined shaped max-width="100" v-if="show">
     <v-card-title id="temp">{{ airTemp }}°C </v-card-title>
     <v-img contain :src="img" height="75px" width="75px"></v-img>
   </v-card>
@@ -21,6 +21,10 @@ const getCurrentWeather = async (lat: number, lon: number) => {
 
 export default Vue.extend({
   props: {
+     show: {
+          type: Boolean,
+          default: true
+      },
     lat: {
       type: Number,
       default: 1,

@@ -1,7 +1,10 @@
 <!-- Contains a carousel item with images and circles to click on-->
 
 <template>
-  <v-form>
+  <v-form v-if="show">
+    <v-btn class="close-btn" icon color="grey" @click='()=>{this.$store.commit("hidePhotoCarousel")}'>
+      <v-icon>mdi-close-circle</v-icon>
+    </v-btn>
     <v-carousel v-model="model" height="80vh" hide-delimiters>
       <!-- For each slide place image -->
       <v-carousel-item v-for="(slide, i) in slides" :key="i">
@@ -24,6 +27,12 @@ import CircleBtn from "@/components/CircleBtn.vue"; // @ is an alias to /src
 export default{
   components: {
     'circle-btn': CircleBtn
+  },
+  props: {
+      show: {
+          type: Boolean,
+          default: true
+      }
   },
   data: () => ({
     model: 0,
@@ -95,3 +104,12 @@ export default{
   }),
 };
 </script>
+
+<style scoped>
+    .close-btn {
+        position: absolute;
+        left: 96%;
+        z-index: 10;
+
+    }
+</style>
