@@ -14,7 +14,7 @@ export default new Vuex.Store({
   getters: {
     roboText: (state) => state.roboText,
     showingRobo: (state) => state.showingRobo,
-    mapPlace: (state) => state.mapPlace,
+    mapPlace: (state) => Number(state.mapPlace),
     showingCarousel: (state) => state.showingCarousel,
     showWeather: (state) => state.showWeather,
   },

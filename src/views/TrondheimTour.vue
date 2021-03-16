@@ -2,7 +2,7 @@
 <template>
   <v-container fluid>
     <Weather id="wheatherbox" :show="showWeather" :lat="63.4305" :lon="10.3951" />
-    <PhotoCarousel :show="showingCarousel" v-on:button-on-photo="handleEventFormPhoto"/>
+    <PhotoCarousel :show="showingCarousel" :mapPlace="mapPlace" v-on:button-on-photo="handleEventFormPhoto"/>
     <Robo :text="roboText" :open="showingRobo"/>
     <Map :show="!showingCarousel" v-on:button-on-photo="handleEventFormPhoto"/>
   </v-container>
