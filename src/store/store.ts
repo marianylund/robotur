@@ -11,6 +11,7 @@ export default new Vuex.Store({
     slideIndex: 0, 
     showingCarousel: false, // controls if carousel with photos should pop up, which photos are showing depends on mapPlace, see more in PhotoCarousel.vue
     showWeather: false, // controls in weather card should be showing see more in Weather.vue
+    showNASA: false, // controls if Nasa button should be showing see more in Nasa.vue
   },
   getters: {
     roboText: (state) => state.roboText,
@@ -19,6 +20,7 @@ export default new Vuex.Store({
     slideIndex: (state) => Number(state.slideIndex),
     showingCarousel: (state) => state.showingCarousel,
     showWeather: (state) => state.showWeather,
+    showNASA: (state) => state.showNASA,
   },
   mutations: {
     buttonOnPhotoClicked(state, button: any) {
@@ -40,7 +42,7 @@ export default new Vuex.Store({
             state.showWeather = true;
           }
           if(button.showNASA != undefined && button.showNASA){
-            console.log("TODO: show NASA");
+            state.showNASA = true;
           }
           if(button.changeToIndex != undefined && button.changeToIndex > -1){
             state.slideIndex = button.changeToIndex;

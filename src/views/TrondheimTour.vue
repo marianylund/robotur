@@ -6,6 +6,7 @@
       :lat="63.4305"
       :lon="10.3951"
     />
+    <Nasa :show="showNASA"/>
     <PhotoCarousel
       :show="showingCarousel"
       :mapPlace="mapPlace"
@@ -21,6 +22,7 @@ import { Component, Vue } from "vue-property-decorator";
 import Map from "@/components/Map.vue"; // @ is an alias to /src
 import PhotoCarousel from "@/components/PhotoCarousel.vue"; // @ is an alias to /src
 import Robo from "@/components/Robo.vue"; // @ is an alias to /src
+import Nasa from "@/components/Nasa.vue";
 import Weather from "@/components/Weather.vue";
 import { mapGetters } from "vuex";
 
@@ -30,6 +32,7 @@ import { mapGetters } from "vuex";
     PhotoCarousel,
     Robo,
     Weather,
+    Nasa,
   },
   // Get variables from the store, to be able to use them in components
   computed: mapGetters([
@@ -38,6 +41,7 @@ import { mapGetters } from "vuex";
     "showingCarousel",
     "mapPlace",
     "showWeather",
+    "showNASA",
     "slideIndex"
   ]),
 })

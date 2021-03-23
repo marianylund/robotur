@@ -138,7 +138,7 @@ export default Vue.extend({
             {
               left: 200, top: -300,
               showNASA: true,
-              roboText: "Vil du se noe kult? Trykk her for å få opp dagens bilde fra verdensrommet!",
+              roboText: "Vil du se noe kult? Trykk på 'NASA' knappen til venstre for å få opp dagens bilde fra verdensrommet!",
             },
           ]},
           {img:"/TrondheimTour/dreiers minne28.jpg", buttons: [

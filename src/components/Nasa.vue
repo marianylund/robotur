@@ -1,9 +1,9 @@
 <template>
-  <div class="text-center">
+  <div class="text-center" v-if="show">
     <v-dialog v-model="dialog" width="500">
       <template v-slot:activator="{ on, attrs }">
-        <v-btn color="red lighten-2" dark v-bind="attrs" v-on="on">
-          Dagens bilde fra NASA
+        <v-btn class="btnNASA" color="red lighten-2" dark v-bind="attrs" v-on="on">
+          NASA
         </v-btn>
       </template>
 
@@ -51,6 +51,12 @@ const fetchPicture = async () => {
 };
 
 export default Vue.extend({
+   props: {
+     show: {
+          type: Boolean,
+          default: true
+      },
+   },
   data: function() {
     return {
       dialog: false,
@@ -71,3 +77,12 @@ export default Vue.extend({
   },
 });
 </script>
+
+<style scoped>
+.btnNASA {
+  position: fixed;
+  left: 50px;
+  top: 300px;
+  z-index: 99; /*  To show the image on top of everyhting */
+}
+</style>

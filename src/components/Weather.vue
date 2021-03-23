@@ -67,5 +67,4 @@ export default Vue.extend({
   width: 12vw;
   text-align: left;
 }
-
 </style>
