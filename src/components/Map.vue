@@ -41,26 +41,33 @@ export default Vue.extend({
             top: 400,
             roboText: "2: Helkanseter",
           },
-          // 3: Geitfjellet
+          // 3: Mellom Helkansætra og Geitfjellet
           {
             id: "Map3",
-            left: 582,
-            top: 20,
-            roboText: "3: Geitfjellet",
+            left: 742,
+            top: 200,
+            roboText: "23: Mellom Helkansætra og Geitfjellet",
           },
-          // 4: Greiers Minne
+          // 4: Geitfjellet
           {
             id: "Map4",
+            left: 582,
+            top: 20,
+            roboText: "4: Geitfjellet",
+          },
+          // 5: Greiers Minne
+          {
+            id: "Map5",
             left: 488,
             top: 68,
-            roboText: "4: Greiers Minne",
+            roboText: "5: Greiers Minne",
           },
-          // 5: Lavollen
+          // 6: Lavollen
           {
-            id: "Map1",
+            id: "Map6",
             left: 590,
             top: 460,
-            roboText: "5: Lavollen",
+            roboText: "6: Lavollen",
           },
         ]
       }),
