@@ -50,9 +50,14 @@ export default Vue.extend({
   }),
   mounted() {
     // Ignore error with style, it actually works:
-    (this.$refs["circleBtn"] as HTMLElement).style.top = this.$props.top + "px";
-    (this.$refs["circleBtn"] as HTMLElement).style.left =
-      this.$props.left + "px";
+    window.addEventListener('resize', this.updatePosition);
+    console.log((this.$parent.$el.clientWidth));
+    this.updatePosition();
+  },
+  
+  beforeDestroy() {
+    // TODO: slett listener når komponenten er borte
+    window.removeEventListener('resize', this.updatePosition);
   },
   methods: {
     hi() {
@@ -64,6 +69,20 @@ export default Vue.extend({
       }
       this.$props.onclick(); // One will always be able to click it, even if it has been clicked on
     },
+
+    updatePosition(){
+      if(this.$refs["circleBtn"] as HTMLElement == undefined){
+        return;
+      }
+      let widthOffset = 0;
+      let heightOffset = 0;
+      if(this.id == "") {
+        widthOffset = this.$parent.$el.clientWidth/2;
+        heightOffset = this.$parent.$el.clientHeight/2;
+      }
+        (this.$refs["circleBtn"] as HTMLElement).style.top = heightOffset + this.$props.top + "px";
+        (this.$refs["circleBtn"] as HTMLElement).style.left = widthOffset + this.$props.left + "px";
+      }
   },
 });
 </script>

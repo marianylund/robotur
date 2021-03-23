@@ -59,12 +59,12 @@ export default Vue.extend({
         slides: [
           {img:"/TrondheimTour/dreiers minne01.jpg", buttons: [
             {
-              left: 200, top: 200,
+              left: 0, top: 0,
               showWeather: true, // TODO: show weather
               roboText: "Her er været for i dag. Heldigvis er det aldri for dårlig vær til å ta en digital tur.",
             },
             {
-              left: 150, top: 500,
+              left: 50, top: 20,
               changeToIndex: 1,
               roboText: "",
             },
