@@ -2,7 +2,7 @@
 <template>
   <v-form v-if="show">
     <div class="mapDiv" ref="mapDiv">
-      <img class = "mapImage" src="/images/mapimage.png" alt="Map" height="600" ref="mapImage">
+      <img class = "mapImage" src="/images/mapimage.jpg" alt="Map" height="600px" width="1224px" ref="mapImage">
       <div v-for="(button, j) in buttons" :key="j">
         <circle-btn :id="button.id" :top="button.top" :left="button.left" :roboText="button.roboText" :onclick="() => $emit('button-on-photo', button)"></circle-btn>
       </div>
@@ -44,8 +44,8 @@ export default Vue.extend({
           // 3: Mellom Helkansætra og Geitfjellet
           {
             id: "Map3",
-            left: 742,
-            top: 200,
+            left: 725,
+            top: 235,
             roboText: "23: Mellom Helkansætra og Geitfjellet",
           },
           // 4: Geitfjellet
