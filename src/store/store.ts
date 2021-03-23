@@ -8,6 +8,7 @@ export default new Vuex.Store({
     roboText: "default",
     showingRobo: false,
     mapPlace: 1, // there are 5 in total see Map.vue for all the buttons on the map
+    slideIndex: 0, 
     showingCarousel: false, // controls if carousel with photos should pop up, which photos are showing depends on mapPlace, see more in PhotoCarousel.vue
     showWeather: false, // controls in weather card should be showing see more in Weather.vue
   },
@@ -15,6 +16,7 @@ export default new Vuex.Store({
     roboText: (state) => state.roboText,
     showingRobo: (state) => state.showingRobo,
     mapPlace: (state) => Number(state.mapPlace),
+    slideIndex: (state) => Number(state.slideIndex),
     showingCarousel: (state) => state.showingCarousel,
     showWeather: (state) => state.showWeather,
   },
@@ -24,7 +26,7 @@ export default new Vuex.Store({
         const buttonId = button.id;
         if(buttonId.includes("Map")){
           // This is a button from map, there are 5 in total
-          state.mapPlace = buttonId[3];
+          state.mapPlace = Number(buttonId[3]);
           state.showingCarousel = true;
         }else{
           state.roboText = button.roboText;
@@ -37,6 +39,10 @@ export default new Vuex.Store({
     },
     hideRobo(state){
         state.showingRobo = false;
-    }
+    },
+    updateIndex(state, index){
+      state.slideIndex = index;
+    }, 
+    
   }
 });

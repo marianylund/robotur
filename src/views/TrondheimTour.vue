@@ -39,6 +39,7 @@ import { mapGetters } from "vuex";
     "showingCarousel",
     "mapPlace",
     "showWeather",
+    "slideIndex"
   ]),
 })
 export default class Home extends Vue {
