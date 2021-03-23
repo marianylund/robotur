@@ -4,7 +4,7 @@
 
 <template>
   <v-form v-if="show" >
-    <v-btn class="close-btn" icon color="grey" @click='()=>{this.$store.commit("hidePhotoCarousel")}'>
+    <v-btn class="close-btn" icon color="textDark" @click='()=>{this.$store.commit("hidePhotoCarousel")}'>
       <v-icon>mdi-close-circle</v-icon>
     </v-btn>
     <v-carousel :value="slideIndex" @change="updateIndex" height="80vh" hide-delimiters :continuous='false'>
@@ -12,7 +12,7 @@
       <v-carousel-item 
         v-for="(slide, i) in mapPlaces[mapPlace - 1].slides" :key="i"
       >
-        <v-sheet height="80vh" align="center" justify="center" tile>
+        <v-sheet class="background" height="80vh" align="center" justify="center" tile>
           <v-img contain :src="slide.img" height="80vh" width="70vw"></v-img>
          <!-- On the image iterate over the buttons needed to add, 
             change their position and add onclick function -->

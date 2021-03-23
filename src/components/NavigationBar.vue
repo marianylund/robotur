@@ -1,7 +1,7 @@
 // Navigation bar that show on top on all pages
 <template>
   <v-container>
-    <v-app-bar app dark>
+    <v-app-bar app class="primary">
       <router-link id="icon-link" to="/">
         <v-icon id="logo-icon" class="mr-200">mdi-robot</v-icon>
       </router-link>

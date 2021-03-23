@@ -2,12 +2,12 @@
   <div class="text-center" v-if="show">
     <v-dialog v-model="dialog" width="500">
       <template v-slot:activator="{ on, attrs }">
-        <v-btn class="btnNASA" color="red lighten-2" dark v-bind="attrs" v-on="on">
+        <v-btn class="btnNASA accent" v-bind="attrs" v-on="on">
           NASA
         </v-btn>
       </template>
 
-      <v-card>
+      <v-card class="primary">
         <v-card-title>
           {{ title }}
         </v-card-title>
@@ -27,7 +27,7 @@
 
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn color="primary" text @click="dialog = false">
+          <v-btn class="accent" text @click="dialog = false">
             Lukk
           </v-btn>
         </v-card-actions>

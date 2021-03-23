@@ -68,8 +68,7 @@ export default Vue.extend({
     hi() {
       console.log("Clicked", this.$props.id);//, this.$props.roboText);
       if (!this.$data.clicked) {
-        (this.$refs["circleBtn"] as HTMLElement).style.backgroundColor =
-          "rgba(250, 14, 6, 0.144)";
+        (this.$refs["circleBtn"] as HTMLElement).style.backgroundColor = this.$vuetify.theme.themes.dark.accent + "";
         this.$data.clicked = true;
       }
       this.$props.onclick(); // One will always be able to click it, even if it has been clicked on
@@ -99,7 +98,7 @@ export default Vue.extend({
   top: 20px;
   width: 30px;
   height: 30px;
-  background-color: rgba(14, 250, 6, 0.6);
+  background-color: rgba(55, 150, 131, 0.6);
   border-radius: 50px;
   border-style: solid;
   border-width: medium;

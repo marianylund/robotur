@@ -1,5 +1,5 @@
 <template>
-  <v-card class="weather" elevation="2" outlined shaped max-width="100" v-if="show">
+  <v-card class="weather secondary" elevation="2" outlined shaped max-width="100" v-if="show">
     <v-card-title id="temp">{{ airTemp }}°C </v-card-title>
     <v-img contain :src="img" height="75px" width="75px"></v-img>
   </v-card>
