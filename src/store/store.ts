@@ -23,14 +23,28 @@ export default new Vuex.Store({
   mutations: {
     buttonOnPhotoClicked(state, button: any) {
         // Extract needed data from button to update state
-        const buttonId = button.id;
-        if(buttonId.includes("Map")){
-          // This is a button from map, there are 5 in total
-          state.mapPlace = Number(buttonId[3]);
-          state.showingCarousel = true;
+        if(button.id != undefined){
+          const buttonId = button.id;
+          if(buttonId.includes("Map")){
+            // This is a button from map, there are 6 in total
+            state.mapPlace = Number(buttonId[3]);
+            state.showingCarousel = true;
+            state.slideIndex = 0; // reset index
+          }
         }else{
-          state.roboText = button.roboText;
-          state.showingRobo = true;
+          if(button.roboText != undefined && button.roboText != ""){
+            state.roboText = button.roboText;
+            state.showingRobo = true;
+          }
+          if(button.showWeather != undefined && button.showWeather){
+            state.showWeather = true;
+          }
+          if(button.showNASA != undefined && button.showNASA){
+            console.log("TODO: show NASA");
+          }
+          if(button.changeToIndex != undefined && button.changeToIndex > -1){
+            state.slideIndex = button.changeToIndex;
+          }
         }
     },
     hidePhotoCarousel(state){

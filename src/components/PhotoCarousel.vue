@@ -3,7 +3,7 @@
 // transition="fade-transition"
 
 <template>
-  <v-form v-if="show">
+  <v-form v-if="show" >
     <v-btn class="close-btn" icon color="grey" @click='()=>{this.$store.commit("hidePhotoCarousel")}'>
       <v-icon>mdi-close-circle</v-icon>
     </v-btn>
@@ -48,7 +48,7 @@ export default Vue.extend({
   methods: {
     updateIndex(ind: number){
       this.$store.commit("updateIndex", ind);
-      console.log("Current photo: " + this.$data.mapPlaces[this.mapPlace-1].slides[this.slideIndex].img);
+      console.log("Index: " + ind + ", current photo: " + this.$data.mapPlaces[this.mapPlace-1].slides[this.slideIndex].img);
     }
   },
   data: () => ({
@@ -60,8 +60,13 @@ export default Vue.extend({
           {img:"/TrondheimTour/dreiers minne01.jpg", buttons: [
             {
               left: 200, top: 200,
-              weather: true, // TODO: show weather
+              showWeather: true, // TODO: show weather
               roboText: "Her er været for i dag. Heldigvis er det aldri for dårlig vær til å ta en digital tur.",
+            },
+            {
+              left: 150, top: 500,
+              changeToIndex: 1,
+              roboText: "",
             },
           ]},
           {img:"/TrondheimTour/dreiers minne10.jpg", buttons: [
@@ -137,7 +142,7 @@ export default Vue.extend({
             },
             {
               left: 200, top: 500,
-              // TODO: Show NASA image
+              showNASA: true,
               roboText: "Vil du se noe kult? Trykk her for å få opp dagens bilde fra verdensrommet!",
             },
           ]},

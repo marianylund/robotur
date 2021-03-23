@@ -28,10 +28,22 @@ export default Vue.extend({
         console.log("Clicked button");
       },
     },
-    roboText: {
-      type: String,
-      default: "oh hi there it's me your pal Robo",
-    },
+    // roboText: {
+    //   type: String,
+    //   default: "oh hi there it's me your pal Robo",
+    // },
+    // showWeather:{
+    //   type: Boolean,
+    //   default: false // button that will start showing weather on that click
+    // },
+    // showNASA:{
+    //   type: Boolean,
+    //   default: false // button that will start showing Nasa on that click
+    // },
+    // changeToIndex:{
+    //   type: Number,
+    //   default: -1 // if is more that -1 then changes index slide to this
+    // },
   },
   data: () => ({
     clicked: false,
@@ -44,7 +56,7 @@ export default Vue.extend({
   },
   methods: {
     hi() {
-      console.log("Clicked", this.$props.id, this.$props.roboText);
+      console.log("Clicked", this.$props.id);//, this.$props.roboText);
       if (!this.$data.clicked) {
         (this.$refs["circleBtn"] as HTMLElement).style.backgroundColor =
           "rgba(250, 14, 6, 0.144)";
