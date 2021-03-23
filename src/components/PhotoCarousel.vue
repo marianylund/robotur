@@ -17,7 +17,7 @@
          <!-- On the image iterate over the buttons needed to add, 
             change their position and add onclick function -->
           <div v-for="(button, j) in slide.buttons" :key="j">
-            <circle-btn :top="button.top" :left="button.left" :onclick="() => $emit('button-on-photo', button)"></circle-btn>
+            <circle-btn :top="button.top" :left="button.left" :order="j" :onclick="() => $emit('button-on-photo', button)"></circle-btn>
           </div>
         </v-sheet>
       </v-carousel-item>
@@ -192,17 +192,16 @@ export default Vue.extend({
           {img:"/TrondheimTour/dreiers minne37.jpg", buttons: [
             {
               left: 0, top: 0,
-              // TODO: pop up robo without a button
               roboText: "Her er hytta Dreiers minne! Ser du at hytta er delvis bygd inn i fjellet? Den ble bygget rundt år 1900 - det er over 120 år siden! Bli med inn, da vel!",
             },
             {
-              left: 0, top: 100, // Leder til bilde 40
-              changeToIndex: 5,
+              left: 0, top: 100, 
+              changeToIndex: 5,// Leder til bilde 40
               roboText: "Hytta ble brukt som skjulested fra tyskerne under Andre verdenskrig. Den heter Dreiers minne fordi en mann ved navn Henrik Dreier satt hytta i stand før krigen.",
             },
             {
-              left: 60, top: 50, // Leder til bilde 43
-              changeToIndex: 6,
+              left: 60, top: 50, 
+              changeToIndex: 6,// Leder til bilde 43
               roboText: "Hytta er innredet med ulik pynt som flagg, stearinlys og bamser. Det skal være koselig å besøke hytta. Hvis man besøker den, skal man forlate den i god stand.",
             },
           ]},
@@ -211,7 +210,7 @@ export default Vue.extend({
         ]
       },
       {
-        // 6Lavollen // TODO: WHERE IS 6 ON THE MAP ???
+        // 6Lavollen
         mapId: 6,
         slides:[
           {img:"/TrondheimTour/dreiers minne64.jpg", buttons: [

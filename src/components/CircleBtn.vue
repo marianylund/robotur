@@ -1,6 +1,10 @@
 <template>
   <v-form>
-    <div class="circleBtn" @click="hi" ref="circleBtn"></div>
+    <div class="circleBtn" @click="hi" ref="circleBtn">
+      <p class="noselect" v-if="$props.id == ''">
+        {{$props.order + 1}}
+      </p>
+    </div>
   </v-form>
 </template>
 
@@ -13,6 +17,10 @@ export default Vue.extend({
     id:{
       type: String,
       default: ""
+    },
+    order:{
+      type:Number,
+      default: -1
     },
     top: {
       type: Number,
@@ -49,14 +57,11 @@ export default Vue.extend({
     clicked: false,
   }),
   mounted() {
-    // Ignore error with style, it actually works:
     window.addEventListener('resize', this.updatePosition);
-    console.log((this.$parent.$el.clientWidth));
     this.updatePosition();
   },
   
   beforeDestroy() {
-    // TODO: slett listener når komponenten er borte
     window.removeEventListener('resize', this.updatePosition);
   },
   methods: {
@@ -94,10 +99,22 @@ export default Vue.extend({
   top: 20px;
   width: 30px;
   height: 30px;
-  background-color: rgba(14, 250, 6, 0.144);
+  background-color: rgba(14, 250, 6, 0.6);
   border-radius: 50px;
   border-style: solid;
   border-width: medium;
   border-color: black;
+  align-content: center;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+  color:black;
 }
 </style>
