@@ -1,5 +1,5 @@
 <template>
-  <v-card elevation="2" outlined shaped max-width="100" v-if="show">
+  <v-card class="weather" elevation="2" outlined shaped max-width="100" v-if="show">
     <v-card-title id="temp">{{ airTemp }}°C </v-card-title>
     <v-img contain :src="img" height="75px" width="75px"></v-img>
   </v-card>
@@ -56,3 +56,16 @@ export default Vue.extend({
   },
 });
 </script>
+
+<style scoped>
+.weather {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  z-index: 99; /*  To show the image on top of everyhting */
+  pointer-events: none; /* Ignore mouse clicks, so it doesn't block everything behind them */
+  width: 12vw;
+  text-align: left;
+}
+
+</style>

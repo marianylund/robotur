@@ -2,7 +2,6 @@
 <template>
   <v-container fluid>
     <Weather
-      id="wheatherbox"
       :show="showWeather"
       :lat="63.4305"
       :lon="10.3951"
@@ -49,12 +48,4 @@ export default class Home extends Vue {
   }
 }
 </script>
-<style scoped>
-#wheatherbox {
-  position: fixed;
-  top: 55px;
-  right: 0px;
-  text-align: left;
-  z-index: 0;
-}
-</style>
+
