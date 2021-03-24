@@ -20,7 +20,7 @@
 
       <v-btn color="accent" text :disabled="tour.disableExplore"
       @click="$router.push(tour.exploreRef)"
-      > Explore </v-btn>
+      > Start turen </v-btn>
 
       <v-spacer></v-spacer>
 
