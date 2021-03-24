@@ -4,9 +4,7 @@
     <v-card-title>
       {{ genericName }}
     </v-card-title>
-    <v-card-subtitle>
-      {{ date }}
-    </v-card-subtitle>
+    <v-card-subtitle> Sist observert: {{ date }} </v-card-subtitle>
 
     <v-card-actions>
       <v-btn icon @click="show = !show">
