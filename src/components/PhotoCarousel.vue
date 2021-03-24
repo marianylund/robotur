@@ -180,8 +180,12 @@ export default Vue.extend({
           {img:"/TrondheimTour/dreiers minne60.jpg", buttons: [
             {
               left: 0, top: 0,
-              // TODO: pop up robo without a button
               roboText: "Nå er vi nådd til turens høydepunkt - men hvor er det? Se nøye på bildet. Ser du hytta?",
+            },
+            {
+              left: -100, top: -50,
+              showPlants: true,
+              roboText: "Det finnes mange forskjellige planter i område, hvis du vil, kan du sjekke hvilke som ble nylig observert ved å trykke på den nye plante knappen!",
             },
             {
               left: 200, top: -200, // på hytta 

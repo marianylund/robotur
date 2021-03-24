@@ -80,9 +80,9 @@ export default Vue.extend({
 
 <style scoped>
 .btnNASA {
-  position: fixed;
-  left: 50px;
-  top: 300px;
+  position: absolute;
+  left: 20px;
+  top: 195px;
   z-index: 99; /*  To show the image on top of everyhting */
 }
 </style>

@@ -61,7 +61,7 @@ export default Vue.extend({
 .weather {
   position: absolute;
   left: 20px;
-  top: 20px;
+  top: 0px;
   z-index: 99; /*  To show the image on top of everyhting */
   pointer-events: none; /* Ignore mouse clicks, so it doesn't block everything behind them */
   width: 12vw;
