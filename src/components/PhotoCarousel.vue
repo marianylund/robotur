@@ -213,14 +213,29 @@ export default Vue.extend({
         // 6Lavollen
         mapId: 6,
         slides:[
-          {img:"/TrondheimTour/dreiers minne64.jpg", buttons: [
+          {img:"/TrondheimTour/dreiers minne67.jpg", buttons: [
+             {
+              left: 0, top: 0, 
+              roboText: "Snømannen er føre-var og har tatt på seg munnbind for å unngå Covid-19-smitte. Munnbind brukes for å unngå dråpe- og kontaktsmitte. Viruset finnes i små dråper som kommer ut gjennom munn og nese når en person som er smittet hoster eller nyser. Hvis man puster inn disse dråpene, eller får virus på hendene og rører seg i ansiktet, kan man bli syk. ",
+            },
+          ]},
+          {img:"/TrondheimTour/dreiers minne65.jpg", buttons: [
             {
-              left: 150, top: 500, 
+              left: 0, top: 0, 
+              roboText: "Velkommen til Lavollen! Det kan være lurt å ta turen hit i helgene, for da er bygget åpen for servering, og man kan kjøpe seg noe godt.",
+            },
+            {
+              left: 50, top: 200, // på trollet
+              changeToIndex: 2,// Leder til bilde 64
               roboText: "",
             },
           ]},
-          {img:"/TrondheimTour/dreiers minne65.jpg", buttons: []},
-          {img:"/TrondheimTour/dreiers minne67.jpg", buttons: []},
+          {img:"/TrondheimTour/dreiers minne64.jpg", buttons: [
+            {
+              left: 100, top: 0, 
+              roboText: "Her får man en varm velkomst fra to glade troll ved inngangsporten til gården!",
+            },
+          ]},
         ]
       },
     ],
