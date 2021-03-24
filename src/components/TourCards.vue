@@ -78,7 +78,7 @@ export default {
         },
         
         {show: false, title: 'Oslo Skog', subtitle: 'Neste digital tur er til Oslo og den kommer snarest! Der blir det mulig å gå rundt i skogene og se på tarun sør av Norge. Det er populært å gå på turer i Oslo.', 
-        img: '/images/tourimage.png',
+        img: '/images/tourimage.webp',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ex magna, commodo in nibh ut, vestibulum dignissim erat. Curabitur sit amet rutrum velit. Nulla faucibus eleifend laoreet. Suspendisse pretium augue ac velit accumsan, sit amet tempus diam tempus. Cras vitae ante ut ipsum rhoncus fermentum. Aenean viverra lobortis mattis. Sed nec ultricies lectus. Maecenas in justo tincidunt, sodales mauris vitae, placerat metus. Maecenas convallis tellus sapien, sed sagittis libero consectetur sit amet. Maecenas sit amet tellus a nibh dapibus blandit. Cras accumsan posuere volutpat. Nullam posuere purus vitae ipsum porta tincidunt. ',
         disableExplore: true,
         exploreRef: '',

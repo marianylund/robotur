@@ -2,7 +2,7 @@
 <template>
   <v-form v-if="show">
     <div class="mapDiv" ref="mapDiv">
-      <img class = "mapImage" src="/images/mapimage.jpg" alt="Map" height="600px" width="1224px" ref="mapImage">
+      <img class = "mapImage" src="/images/mapimage.webp" alt="Map" height="600px" width="1224px" ref="mapImage">
       <div v-for="(button, j) in buttons" :key="j">
         <circle-btn :id="button.id" :top="button.top" :left="button.left" :roboText="button.roboText" :onclick="() => $emit('button-on-photo', button)"></circle-btn>
       </div>
