@@ -13,6 +13,7 @@ export default new Vuex.Store({
     showWeather: false, // controls in weather card should be showing see more in Weather.vue
     showNASA: false, // controls if Nasa button should be showing see more in Nasa.vue
     showPlants: false, // controls if it should show plant button see more in PlantButton.vue
+    showQuiz: false, // controls if it should show quiz button see more in QuizButton.vue
   },
   getters: {
     roboText: (state) => state.roboText,
@@ -23,6 +24,7 @@ export default new Vuex.Store({
     showWeather: (state) => state.showWeather,
     showNASA: (state) => state.showNASA,
     showPlants: (state) => state.showPlants,
+    showQuiz: (state) => state.showQuiz,
   },
   mutations: {
     buttonOnPhotoClicked(state, button: any) {
@@ -51,6 +53,9 @@ export default new Vuex.Store({
           }
           if(button.showPlants != undefined && button.showPlants){
             state.showPlants = true;
+          }
+          if(button.showQuiz != undefined && button.showQuiz){
+            state.showQuiz = true;
           }
         }
     },

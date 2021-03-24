@@ -3,6 +3,8 @@
     <v-dialog v-model="dialog" width="500">
       <template v-slot:activator="{ on, attrs }">
         <v-btn class="btnNASA accent" v-bind="attrs" v-on="on">
+    <v-icon class="ml-0 mr-2">{{'mdi-space-invaders'}}</v-icon>
+
           NASA
         </v-btn>
       </template>
@@ -82,7 +84,7 @@ export default Vue.extend({
 .btnNASA {
   position: absolute;
   left: 20px;
-  top: 195px;
-  z-index: 99; /*  To show the image on top of everyhting */
+  top: 215px;
+  z-index: 90; /*  To show the image on top of everyhting */
 }
 </style>

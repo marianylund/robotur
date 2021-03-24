@@ -7,14 +7,13 @@
     <v-btn class="close-btn" icon color="textDark" @click='()=>{this.$store.commit("hidePhotoCarousel")}'>
       <v-icon>mdi-close-circle</v-icon>
     </v-btn>
-    <v-carousel :value="slideIndex" @change="updateIndex" height="80vh" hide-delimiters :continuous='false'>
+    <v-carousel :value="slideIndex" @change="updateIndex" width="60vh" height="80vh" hide-delimiters :continuous='false'>
       <!-- For each slide place image -->
       <v-carousel-item 
         v-for="(slide, i) in mapPlaces[mapPlace - 1].slides" :key="i"
-        eager
       >
         <v-sheet class="background" height="80vh" align="center" justify="center" tile>
-          <v-img eager contain :src="slide.img" height="80vh" width="70vw"></v-img>
+          <v-img  contain :src="slide.img" height="80vh" width="70vw"></v-img>
          <!-- On the image iterate over the buttons needed to add, 
             change their position and add onclick function -->
           <div v-for="(button, j) in slide.buttons" :key="j">
@@ -237,8 +236,13 @@ export default Vue.extend({
           ]},
           {img:"/TrondheimTour/dreiers minne64.webp", buttons: [
             {
-              left: 100, top: 0, 
+              left: -50, top: -50, 
               roboText: "Her får man en varm velkomst fra to glade troll ved inngangsporten til gården!",
+            },
+            {
+              left: 100, top: 0, 
+              showQuiz: true,
+              roboText: "Tusen takk for turen, håper du lærte noe nytt! Gjerne ta en titt på Quizen, hvis du vil det. Ha det!",
             },
           ]},
         ]

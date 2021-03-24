@@ -1,12 +1,11 @@
 <template>
   <div class="text-center" v-if="show">
     <v-btn
-      class="btnPlanter accent"
+      class="btnQuiz accent"
       @click="$router.push('/trondheimtour/plants')"
     >
-    <v-icon class="ml-0 mr-2">{{'mdi-flower-outline'}}</v-icon>
-
-      Planter
+    <v-icon class="ml-0 mr-2">{{'mdi-medal-outline'}}</v-icon>
+      Quiz
     </v-btn>
   </div>
 </template>
@@ -25,10 +24,10 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-.btnPlanter {
+.btnQuiz {
   position: absolute;
   left: 20px;
-  top: 170px;
+  top: 262px;
   z-index: 90; /*  To show the image on top of everyhting */
 }
 </style>
