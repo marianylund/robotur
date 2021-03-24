@@ -1,17 +1,23 @@
 <template>
   <div class="text-center">
-    <v-img
-      v-for="(url, index) in imgs"
-      :key="index"
-      :src="url"
-      max-height="150"
-      max-width="250"
-    ></v-img>
+    <v-row>
+      <v-col align="start">
+        <v-btn class="accent" v-on="on" @click="$router.push('/trondheimtour')">
+          Tilbake
+        </v-btn>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col v-for="(plant, index) in imgs" :key="index">
+        <PlantCard v-bind="plant" />
+      </v-col>
+    </v-row>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
+import PlantCard from "./PlantCard.vue";
 
 const fetchPlants = async () => {
   const url =
@@ -26,6 +32,9 @@ const fetchPlants = async () => {
 };
 
 export default Vue.extend({
+  components: {
+    PlantCard,
+  },
   data: function() {
     return {
       imgs: [] as any,
@@ -38,10 +47,47 @@ export default Vue.extend({
         const img = result["media"];
         if (Array.isArray(img)) {
           for (const i of img) {
-            this.imgs.push(i["identifier"]);
+            const plant = {
+              url: i["identifier"],
+              rightsHolder: i["rightsHolder"],
+              genericName: result["genericName"],
+              scientificName: result["scientificName"],
+              kingdom: result["kingdom"],
+              phylum: result["phylum"],
+              plantClass: result["class"],
+              order: result["order"],
+              family: result["family"],
+              genus: result["genus"],
+              species: result["species"],
+              date:
+                result["day"].toString() +
+                "/" +
+                result["month"].toString() +
+                "/" +
+                result["year"].toString(),
+            };
+            this.imgs.push(plant);
           }
         } else {
-          this.imgs.push(img["identifier"]);
+          const plant = {
+            url: img["identifier"],
+            rightsHolder: img["rightsHolder"],
+            genericName: result["genericName"],
+            scientificName: result["scientificName"],
+            kingdom: result["kingdom"],
+            phylum: result["phylum"],
+            order: result["order"],
+            family: result["family"],
+            genus: result["genus"],
+            species: result["species"],
+            date:
+              result["day"].toString() +
+              "/" +
+              result["month"].toString() +
+              "/" +
+              result["year"].toString(),
+          };
+          this.imgs.push(plant);
         }
       }
     });

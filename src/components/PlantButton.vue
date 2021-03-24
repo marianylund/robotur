@@ -1,7 +1,9 @@
 <template>
   <div class="text-center" v-if="show">
-    <!-- TODO: for Tomas koble den til med plante nettsiden -->
-    <v-btn class="btnPlanter accent">
+    <v-btn
+      class="btnPlanter accent"
+      @click="$router.push('/trondheimtour/plants')"
+    >
       Planter
     </v-btn>
   </div>
@@ -11,12 +13,12 @@
 import Vue from "vue";
 
 export default Vue.extend({
-   props: {
-     show: {
-          type: Boolean,
-          default: true
-      },
-   },
+  props: {
+    show: {
+      type: Boolean,
+      default: true,
+    },
+  },
 });
 </script>
 
