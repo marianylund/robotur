@@ -71,7 +71,7 @@ export default {
      tours: [
         {show: false, title: 'Dreiers Minne', 
         subtitle: 'Bli med til bymarka - Trondheims største friluftsområde! Denne turen går til Dreiers minne, en naturhytte bygd inn i terrenget. Turen er på ca. 7,5 km og tar mellom 2-3 timer, om du ønsker å gå den selv.',
-        img: '/TrondheimTour/dreiers minne25.jpg',
+        img: '/TrondheimTour/dreiers minne25.webp',
         description: 'Jeg tar deg gjerne med på en digital tur hit, hvor vi sammen følger turens rute og du får se bilder av stien, planter og bygninger vi møter langs veien. På den digitale turen kan du lære om naturen og dyrelivet man kan møte på i løpet av turen, og om det historiske minnesmerket Dreiers minne. Hvis du vil ta turen selv: Turen begynner ved Baklidammen. For å komme seg dit kan man ta bussrute 26 og gå av på bussholdeplass Baklia, eller man kan parkere på Baklidammen Parkering. Fra Baklidammen går turen videre mot Lavollen, og derfra går man videre til Helkansætra. Herfra går man mot Geitfjellet, før man så går videre for å komme til Dreiers minne. Deretter går man mot Lavollen, og følger derfra ruta man startet for å komme seg tilbake til Baklidammen hvor turen ender.',
         disableExplore: false,
         exploreRef: '/trondheimtour',
