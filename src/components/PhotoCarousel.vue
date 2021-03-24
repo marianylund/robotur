@@ -64,7 +64,7 @@ export default Vue.extend({
               roboText: "Her er været for i dag. Heldigvis er det aldri for dårlig vær til å ta en digital tur.",
             },
             {
-              left: 400, top: -300, // på et tre
+              left: 300, top: -200, // på et tre
               changeToIndex: 1, // lede til bilde #10
               roboText: "Dette er gran. Det er en av de vanligste tresortene i Norge. Grana kan bli opptil 500 år gammel! Hvis du finner en stubbe i skogen kan du telle årringer på den for å finne alderen på treet.",
             },
@@ -136,7 +136,7 @@ export default Vue.extend({
               roboText: "Dette er utsikten fra turens andre stopp! Her ser vi Trondheim by i det fjerne.",
             },
             {
-              left: 200, top: -300,
+              left: 200, top: -200,
               showNASA: true,
               roboText: "Vil du se noe kult? Trykk på 'NASA' knappen til venstre for å få opp dagens bilde fra verdensrommet!",
             },
