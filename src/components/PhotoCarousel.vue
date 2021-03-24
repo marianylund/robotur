@@ -11,9 +11,10 @@
       <!-- For each slide place image -->
       <v-carousel-item 
         v-for="(slide, i) in mapPlaces[mapPlace - 1].slides" :key="i"
+        eager
       >
         <v-sheet class="background" height="80vh" align="center" justify="center" tile>
-          <v-img contain :src="slide.img" height="80vh" width="70vw"></v-img>
+          <v-img eager contain :src="slide.img" height="80vh" width="70vw"></v-img>
          <!-- On the image iterate over the buttons needed to add, 
             change their position and add onclick function -->
           <div v-for="(button, j) in slide.buttons" :key="j">
