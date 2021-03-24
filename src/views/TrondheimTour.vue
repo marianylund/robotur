@@ -7,6 +7,8 @@
       :lon="10.3951"
     />
     <Nasa :show="showNASA"/>
+    <PlantButton :show="showPlants"/>
+    
     <PhotoCarousel
       :show="showingCarousel"
       :mapPlace="mapPlace"
@@ -24,6 +26,7 @@ import PhotoCarousel from "@/components/PhotoCarousel.vue"; // @ is an alias to 
 import Robo from "@/components/Robo.vue"; // @ is an alias to /src
 import Nasa from "@/components/Nasa.vue";
 import Weather from "@/components/Weather.vue";
+import PlantButton from "@/components/PlantButton.vue";
 import { mapGetters } from "vuex";
 
 @Component({
@@ -33,6 +36,7 @@ import { mapGetters } from "vuex";
     Robo,
     Weather,
     Nasa,
+    PlantButton
   },
   // Get variables from the store, to be able to use them in components
   computed: mapGetters([
@@ -42,7 +46,8 @@ import { mapGetters } from "vuex";
     "mapPlace",
     "showWeather",
     "showNASA",
-    "slideIndex"
+    "slideIndex",
+    "showPlants"
   ]),
 })
 export default class Home extends Vue {
