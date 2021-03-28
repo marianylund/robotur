@@ -116,7 +116,10 @@
                 }
               }
             "
-            :disabled="question != questions.length - 1"
+            :disabled="
+              question != questions.length - 1 ||
+                answers[question][0] == 'default'
+            "
             v-show="question == questions.length - 1"
           >
             Ferdig <v-icon>{{ "mdi-check" }}</v-icon>
