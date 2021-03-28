@@ -1,5 +1,6 @@
 <template>
   <div class="text-center">
+    <h1>Observerte planter i området</h1>
     <v-row>
       <v-col align="start">
         <v-btn class="accent" v-on="on" @click="$router.push('/trondheimtour')">
