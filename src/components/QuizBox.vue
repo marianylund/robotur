@@ -145,7 +145,7 @@ export default Vue.extend({
         ["default"],
         ["default"],
       ],
-      correct: [1, 1, 0, 2, 3],
+      correct: [2, 1, 0, 2, 3],
       corrAns: 0,
       question: 0,
       questions: [
