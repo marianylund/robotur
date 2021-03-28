@@ -26,6 +26,11 @@ const routes: Array<RouteConfig> = [
     name: "TrondheimPlants",
     component: () => import("../views/TrondheimPlants.vue"),
   },
+  {
+    path: "/trondheimtour/quiz",
+    name: "TrondheimQuiz",
+    component: () => import("../views/TrondheimQuiz.vue"),
+  },
 ];
 
 const router = new VueRouter({
