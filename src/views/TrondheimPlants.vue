@@ -1,4 +1,4 @@
-// Page you to when you click explore on the Trondheim Tour card
+// Page you go to when you click the plant button
 <template>
   <v-container fluid>
     <Plants />
